@@ -5,6 +5,11 @@ export default (state, action) => {
           ...state,
           messages: [action.payload]
         }
+      case 'TRANSACTION_ERROR':
+       return {
+          ...state,
+          error: action.payload
+        }
       default:
         return state;
     }
